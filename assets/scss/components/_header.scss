@@ -1,16 +1,14 @@
 .header {
   width: 100%;
   @include flex(column, baseline, flex-start);
-  gap: 24px;
+  gap: $xl;
   align-self: stretch;
 
   &__title {
     color: $midnight-express;
-    font-size: 32px;
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
+    font-size: $fs-xl;
+    font-family: $second-font;
+    font-weight: $font-black;
   }
 
   &__elements {
@@ -20,15 +18,15 @@
     &.-input {
       @include flex(row, baseline, center);
       width: 327px;
-      padding: 16px;
-      gap: 8px;
-      border-radius: 4px;
-      border: 1px solid $periwinkle-light;
+      padding: $md;
+      gap: $sm;
+      @include border(1px, solid, $periwinkle-light, 4px);
+      
       input {
         border: none;
         outline: none;
-        font-size: 16px;
-        padding: 8px;
+        font-size: $fs-md;
+        padding: $sm;
         color: $midnight-express;
         opacity: 0.699999988079071;
       }
@@ -36,18 +34,22 @@
 
     &.-roles {
       @include flex(row, baseline, flex-start);
-      border-radius: 4px;
+      border-radius: $xs;
 
       .role {
       @include flex(row, center, center);
-        padding: 16px;
-        gap: 8px;
+        padding: $md;
+        gap: $sm;
         color: $midnight-express;
-        font-size: 16px;
-        font-family: Poppins;
-        font-style: normal;
+        font-size: $fs-md;
+        font-family: $first-font;
         font-weight: 500;
-        line-height: normal;
+
+        &:active{
+          background-color: $cornflower-blue;
+          color: $white;
+          @include border(1px, solid, $white, $sm)
+        }
       }
     }
   }
