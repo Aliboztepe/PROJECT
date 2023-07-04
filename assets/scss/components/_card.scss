@@ -1,11 +1,11 @@
-.card {
-    @include flex(row, center, flex-start);
-    flex-wrap: wrap;
-    gap: 20px; 
-    background-color: $white;
-    border-radius: $r-lg;
-    padding: $xxxl; // padding inside the card
-}
-    width: 1213px;
-    height: 830px;
+.users-page {
+  // padding inside the card
+  background-color: $white;
+  padding: $xxxl;
+  border-radius: $r-lg;
+  width: 1225px;
+
+  .card {
+    @include flex(row, baseline, flex-start, wrap, 20px);
+  }
 }

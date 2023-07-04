@@ -3,6 +3,7 @@
   @include flex(column, baseline, flex-start);
   gap: $xl;
   align-self: stretch;
+  padding-bottom: 70px;
 
   &__title {
     color: $midnight-express;
@@ -21,7 +22,7 @@
       padding: $md;
       gap: $sm;
       @include border(1px, solid, $periwinkle-light, 4px);
-      
+
       input {
         border: none;
         outline: none;
@@ -37,18 +38,31 @@
       border-radius: $xs;
 
       .role {
-      @include flex(row, center, center);
+        @include flex(row, center, center);
         padding: $md;
         gap: $sm;
         color: $midnight-express;
         font-size: $fs-md;
         font-family: $first-font;
-        font-weight: 500;
+        font-weight: $font-medium;
+        cursor: pointer;
 
-        &:active{
+        &.-active {
           background-color: $cornflower-blue;
           color: $white;
-          @include border(1px, solid, $white, $sm)
+          @include border(1px, solid, $white, $sm);
+        }
+
+        &:active {
+          background-color: $cornflower-blue;
+          color: $white;
+          @include border(1px, solid, $white, $sm);
+        }
+
+        &:hover {
+          background-color: $cornflower-blue;
+          color: $white;
+          @include border(1px, solid, $white, $sm);
         }
       }
     }
