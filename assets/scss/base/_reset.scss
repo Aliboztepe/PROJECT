@@ -13,14 +13,18 @@ li {
   list-style: none;
 }
 
-select, input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+select,
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 body {
-  background: $solitude;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  padding: 173px 194px;
+  background: $solitude;
+  box-shadow: $min-shadow;
 }
