@@ -1,0 +1,56 @@
+.header {
+  width: 100%;
+  @include flex(column, baseline, flex-start);
+  gap: $xl;
+  align-self: stretch;
+
+  &__title {
+    color: $midnight-express;
+    font-size: $fs-xl;
+    font-family: $second-font;
+    font-weight: $font-black;
+  }
+
+  &__elements {
+    @include flex(row, space-between, center);
+    align-self: stretch;
+
+    &.-input {
+      @include flex(row, baseline, center);
+      width: 327px;
+      padding: $md;
+      gap: $sm;
+      @include border(1px, solid, $periwinkle-light, 4px);
+      
+      input {
+        border: none;
+        outline: none;
+        font-size: $fs-md;
+        padding: $sm;
+        color: $midnight-express;
+        opacity: 0.699999988079071;
+      }
+    }
+
+    &.-roles {
+      @include flex(row, baseline, flex-start);
+      border-radius: $xs;
+
+      .role {
+      @include flex(row, center, center);
+        padding: $md;
+        gap: $sm;
+        color: $midnight-express;
+        font-size: $fs-md;
+        font-family: $first-font;
+        font-weight: 500;
+
+        &:active{
+          background-color: $cornflower-blue;
+          color: $white;
+          @include border(1px, solid, $white, $sm)
+        }
+      }
+    }
+  }
+}
