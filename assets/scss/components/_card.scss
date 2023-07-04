@@ -1,7 +1,11 @@
 .card {
-    @include flex(column, center, flex-start);
+    @include flex(row, center, flex-start);
+    flex-wrap: wrap;
+    gap: 20px; 
     background-color: $white;
     border-radius: $r-lg;
+    padding: $xxxl; // padding inside the card
+}
     width: 1213px;
     height: 830px;
 }
