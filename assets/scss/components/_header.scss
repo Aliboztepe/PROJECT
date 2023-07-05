@@ -5,65 +5,45 @@
   align-self: stretch;
   padding-bottom: 70px;
 
-  &__title {
-    color: $midnight-express;
-    font-size: $fs-xl;
-    font-family: $second-font;
-    font-weight: $font-black;
-  }
-
   &__elements {
     @include flex(row, space-between, center);
     align-self: stretch;
-
-    &.-input {
+  }
+  
+  .search-form {
       @include flex(row, baseline, center);
-      width: 327px;
+      @include border(1px, solid, $periwinkle-light, 4px);
+      padding: $md;
+      width: 100%;
+      max-width: 327px;
+      gap: $sm;
+  }
+
+  &-menu {
+    @include flex(row, baseline, flex-start);
+    border-radius: $xs;
+
+    &__item {
+      @include flex(row, center, center);
       padding: $md;
       gap: $sm;
-      @include border(1px, solid, $periwinkle-light, 4px);
+      color: $midnight-express;
+      font-size: $fs-md;
+      font-family: $first-font;
+      font-weight: $font-medium;
+      cursor: pointer;
+      transition: all 0.05s ease-in;
 
-      input {
-        border: none;
-        outline: none;
-        font-size: $fs-md;
-        padding: $sm;
-        color: $midnight-express;
-        opacity: 0.699999988079071;
+      &.-active {
+        background-color: $cornflower-blue;
+        color: $white;
+        border-radius: $r-sm;
       }
-    }
 
-    &.-roles {
-      @include flex(row, baseline, flex-start);
-      border-radius: $xs;
-
-      .role {
-        @include flex(row, center, center);
-        padding: $md;
-        gap: $sm;
-        color: $midnight-express;
-        font-size: $fs-md;
-        font-family: $first-font;
-        font-weight: $font-medium;
-        cursor: pointer;
-
-        &.-active {
-          background-color: $cornflower-blue;
-          color: $white;
-          @include border(1px, solid, $white, $sm);
-        }
-
-        &:active {
-          background-color: $cornflower-blue;
-          color: $white;
-          @include border(1px, solid, $white, $sm);
-        }
-
-        &:hover {
-          background-color: $cornflower-blue;
-          color: $white;
-          @include border(1px, solid, $white, $sm);
-        }
+      &:hover {
+        background-color: $cornflower-blue;
+        color: $white;
+        border-radius: $r-sm;
       }
     }
   }

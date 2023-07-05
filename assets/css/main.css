@@ -23,9 +23,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background: #e6eaf8;
   box-shadow: 0px 8px 23px 0px rgba(218, 224, 249, 0.7);
+  height: 100vh;
 }
 
 /* 
@@ -62,7 +62,7 @@ Use any margin is below.
   border-radius: 16px;
   width: 1225px;
 }
-.users-page .card {
+.users-page .card__list {
   display: flex;
   flex-direction: row;
   justify-content: baseline;
@@ -71,7 +71,7 @@ Use any margin is below.
   gap: 20px;
 }
 
-.user-card {
+.card {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -85,41 +85,33 @@ Use any margin is below.
   border-radius: 16px;
   background: #fbfcff;
 }
-.user-card:hover, .user-card.-active {
+.card:hover {
   border: 1px solid #bfc8e5;
   border-radius: 16px;
   box-shadow: 0px 8px 23px 0px rgba(218, 224, 249, 0.7);
 }
-.user-card__image {
+.card__image {
   width: 97px;
   height: 97px;
   flex-shrink: 0;
   border-radius: 97px;
   background: url(<path-to-image>), lightgray 50%/cover no-repeat;
 }
-.user-card__info {
+.card__info {
   gap: 16px;
 }
-.user-card__info__details {
-  padding-top: 20px;
-  gap: 4px;
-}
-.user-card__info__details__name {
+.card__name {
   color: #151b32;
   font-size: 18px;
   font-family: "Merriweather", serif;
-  font-style: normal;
   font-weight: 900;
-  line-height: normal;
 }
-.user-card__info__details__description {
+.card__description {
   padding-bottom: 12px;
   color: #151b32;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 .header {
@@ -134,12 +126,6 @@ Use any margin is below.
   align-self: stretch;
   padding-bottom: 70px;
 }
-.header__title {
-  color: #151b32;
-  font-size: 32px;
-  font-family: "Merriweather", serif;
-  font-weight: 900;
-}
 .header__elements {
   display: flex;
   flex-direction: row;
@@ -149,28 +135,21 @@ Use any margin is below.
   gap: 0px;
   align-self: stretch;
 }
-.header__elements.-input {
+.header .search-form {
   display: flex;
   flex-direction: row;
   justify-content: baseline;
   align-items: center;
   flex-wrap: nowrap;
   gap: 0px;
-  width: 327px;
-  padding: 16px;
-  gap: 8px;
   border: 1px solid #bfc8e5;
   border-radius: 4px;
+  padding: 16px;
+  width: 100%;
+  max-width: 327px;
+  gap: 8px;
 }
-.header__elements.-input input {
-  border: none;
-  outline: none;
-  font-size: 16px;
-  padding: 8px;
-  color: #151b32;
-  opacity: 0.6999999881;
-}
-.header__elements.-roles {
+.header-menu {
   display: flex;
   flex-direction: row;
   justify-content: baseline;
@@ -179,7 +158,7 @@ Use any margin is below.
   gap: 0px;
   border-radius: 4px;
 }
-.header__elements.-roles .role {
+.header-menu__item {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -193,23 +172,16 @@ Use any margin is below.
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   cursor: pointer;
+  transition: all 0.05s ease-in;
 }
-.header__elements.-roles .role.-active {
+.header-menu__item.-active {
   background-color: #849fff;
   color: #ffffff;
-  border: 1px solid #ffffff;
   border-radius: 8px;
 }
-.header__elements.-roles .role:active {
+.header-menu__item:hover {
   background-color: #849fff;
   color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 8px;
-}
-.header__elements.-roles .role:hover {
-  background-color: #849fff;
-  color: #ffffff;
-  border: 1px solid #ffffff;
   border-radius: 8px;
 }
 
@@ -230,4 +202,21 @@ Use any margin is below.
   font-size: 12px;
   color: #516fd4;
   font-weight: 500;
+}
+
+.title {
+  color: #151b32;
+  font-size: 32px;
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+  color: #151b32;
+  opacity: 0.7;
+  width: 100%;
 }
