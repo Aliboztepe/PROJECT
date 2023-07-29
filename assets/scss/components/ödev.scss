@@ -1,0 +1,65 @@
+/* Backgorunds */
+
+$alert-bg: rl("~@/assets/images/icons/icons@system-info-fill-big.svg") no-repeat
+  left 20px top 8px $chablisa;
+$alert-outlined-bg: url("~@/assets/images/icons/icons@system-info-fill-big.svg")
+  no-repeat left 1px center;
+
+$green-bg: url("~@/assets/images/icons/icons@system-info-fill-green.svg")
+  no-repeat left 20px top 11px $athens-gray-light;
+$green-outlined-bg: url("~@/assets/images/icons/icons@system-info-fill-green.svg")
+  no-repeat left 20px center $white;
+
+$yellow-bg: url("~@/assets/images/icons/icons@system-info-yellow-fill.svg")
+  no-repeat left 20px top 11px $gin-fizz;
+$yellow-outlined-bg: url("~@/assets/images/icons/icons@system-info-yellow-fill.svg")
+  no-repeat left 20px center $white;
+
+.alert {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 12px 12px 55px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-family: $main-font;
+  font-size: 1rem;
+  line-height: 20px;
+  color: $alert-text;
+  background: $alert-bg;
+
+  a {
+    font-weight: 500;
+    color: $alert-text;
+    cursor: pointer;
+  }
+
+  &.-outlined {
+  background: $alert-outlined-bg;
+  }
+
+  &.-green {
+    color: $faded-jade;
+    background: $green-bg;
+
+    a {
+      color: $faded-jade;
+    }
+
+    &.-outlined {
+      background: $green-outlined-bg;
+    }
+  }
+
+  &.-yellow {
+    color: $bourbon;
+    background: $green-bg;
+
+    a {
+      color: $bourbon;
+    }
+
+    &.-outlined {
+      background: $yellow-outlined-bg;
+    }
+  }
+}
